@@ -1,0 +1,76 @@
+Structure
+=========
+
+1. Intro:
+1st para: what is the problem; why is it important? Include a figure with an example if you can.
+
+(Fig and table captions should be as standalone as possible.)
+
+2nd para: your solution at a high level (not very experts) "marketing pitch"
+
+3rd para: specific solution, details
+
+4th para: "The specific contributions are:"
+
+0. Abstract:
+- What is the problem; why it is important
+- Solution: general, specific
+- Results
+
+2. Related Work:
+- break down into topics; one para for each
+- each para: what's been done; why it's good; why your work is better
+
+3. Approach
+- Architecture of your model. Include a figure if necessary. Don't patronize the reader (no LSTM fig). Self contained caption.
+- High level. 
+
+4. Details about the approach
+- 1st para: summary
+- detail each component in one subsection. Be as detailed as you can here. This should be easy for you to write!
+- Can I replicate your work?
+- As simple as you can.
+
+5. Experiments
+
+5.1. Datasets: train, dev, test. Be clear about tuning. 
+5.2 Baselines: include SOA models, include obvious baselines
+
+6 Results
+- Main table with the main results (WRITE THIS FIRST) ALWAYS include statistical significance results. Do not use t-test because your distributions are likely not normal. Use a non-parametric test.
+- Explain (1 page) the results above in as much details as you can. Hypothesize when you can, but don't make up stories if you can't support them with (some) data. See also: https://en.wikipedia.org/wiki/Hypotheses_non_fingo (thanks Marco)
+- Ablation test: remove each of your contribution at a time. Or start from the baseline, and add your contributions one at a time. Be honest. Do not hide if some of your contributions are minimal. But don't shoot yourself in the foot (i.e., don't be unnecessarily negative).
+- Error analysis: come up with classes of errors (Table 6) - generalize!
+
+6. Conclusion
+- Write in past tense (the only place)
+- Tell them what they read
+- Minimize overlap with abstract
+- Say something not in the abstract (error analysis and future work.
+
+
+Order of Writing
+================
+
+0. Related work research
+1. Table with main results first!
+2. Related work
+3. Introduction
+- Approach, results, conclusion, abstract
+
+General Comments
+================
+
+- No modal verbs: may, can, would.
+- No adjectives. Don't say "novel approach". Say "approach"
+- No metaphors, analogies
+- Use active voice as much as possible.
+- For NLP conferences: place tables/figures at the top of the page where the text introduces them.
+- Use simple sentence structures, e.g., subject-verb-object.
+- See also: https://cseweb.ucsd.edu/~swanson/papers/science-of-writing.pdf
+
+
+
+
+
+
