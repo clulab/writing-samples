@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{forest}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{figure}
+\centering
+\begin{forest}
+[S
+  [NP
+    [NNP
+      [John]]]
+  [VP,blue
+    [V
+      [sent]]
+    [NP
+      [NNP
+        [Mary,fill=red]]]
+    [NP
+      [DT
+        [a]]
+      [NN
+        [letter]]]]]
+\end{forest}
+\caption{A tree!}
+\end{figure}
+
+\begin{tikzpicture}
+\node (j) at (0, 0) {John};
+\node (s) at (2, 0) {sent} edge[out=135, in=45, -latex] node[auto,swap] {Label} (j);
+\end{tikzpicture}
+
+\end{document}

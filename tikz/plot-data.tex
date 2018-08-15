@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.16}
+
+\begin{document}
+
+
+\begin{tikzpicture}
+
+\pgfplotstableread{data.txt}{\data};
+
+\begin{axis}[
+  ybar,
+  xtick=data,
+  xticklabels from table={\data}{X},
+  xticklabel style={text height=1.5ex},
+  nodes near coords,
+]
+
+\addplot table[x expr=\coordindex,y=Y1]{\data};
+\addplot table[x expr=\coordindex,y=Y2]{\data};
+\legend{Y1,Y2}
+
+\end{axis}
+
+\end{tikzpicture}
+
+\end{document}

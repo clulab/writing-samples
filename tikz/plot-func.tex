@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+\begin{axis}[
+  height=5cm,
+  width=6cm,
+  xmin=-5,
+  xmax=5,
+  xlabel={Here, a comma!},
+  title={Yay, a title!},
+]
+
+\addplot[mark=none, blue, samples=100] {1/(1 + e^(-x))};
+
+\end{axis}
+
+\end{tikzpicture}
+
+\end{document}
