@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{forest}
-\usepackage{tikz}
+\usepackage{tikz-dependency}
 
 \begin{document}
 
@@ -23,12 +23,22 @@
       [NN
         [letter]]]]]
 \end{forest}
-\caption{A tree!}
+\caption{A constituency tree!}
 \end{figure}
 
-\begin{tikzpicture}
-\node (j) at (0, 0) {John};
-\node (s) at (2, 0) {sent} edge[out=135, in=45, -latex] node[auto,swap] {Label} (j);
-\end{tikzpicture}
+\begin{figure}
+\centering
+\begin{dependency}
+\begin{deptext}[column sep=2em]
+John \& sent \& Mary \& a \& letter \\
+\end{deptext}
+\deproot{2}{root}
+\depedge{2}{1}{nsubj}
+\depedge{2}{3}{iobj}
+\depedge{5}{4}{det}
+\depedge{2}{5}{dobj}
+\end{dependency}
+\caption{A dependency tree!}
+\end{figure}
 
 \end{document}
